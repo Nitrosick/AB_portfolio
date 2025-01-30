@@ -1,0 +1,69 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-purple: #510046;
+  --color-violet: #8763ff;
+  --color-violet-light-1: #9275f5;
+  --color-violet-light-2: #e4daff;
+  --color-violet-light-3: #f1ecff;
+
+  --gradient-violet-1: linear-gradient(180deg, rgba(228, 219, 255, 0.4), rgba(228, 219, 255, 0.6) 40%, #e4dbff 80%);
+  --gradient-violet-2: linear-gradient(180deg, #d8cbff, rgba(216, 203, 255, 0.6) 45%, #d8cbff 85%);
+  --gradient-violet-3: linear-gradient(180deg, #cebcff, rgba(206, 188, 255, 0.6));
+  --gradient-violet-4: linear-gradient(180deg, #f9e2ff, #d9befc, #aebafc);
+
+  --gradient-white: linear-gradient(180deg, rgba(255, 255, 255, 0.8), #ffffff 25%);
+  --gradient-pearl: linear-gradient(180deg, rgba(239, 239, 254, 0.6), #efeffe);
+
+  --unit: 0.75rem;
+  --block-radius: 6.25rem;
+  --font-size-xs: 1rem;
+  --font-size-s: 1.25rem;
+  --font-size-m: 1.5rem;
+  --font-size-l: 1.875rem;
+  --font-size-xl: 2.25rem;
+}
+
+$purple: var(--color-purple);
+$violet: var(--color-violet);
+$violet-light: var(--color-violet-light-1);
+$violet-super-light: var(--color-violet-light-3);
+
+$font: 'Instrument Sans', 'Arial', sans-serif;
+$unit: var(--unit);
+$block-stroke: var(--gradient-white);
+$block-radius: var(--block-radius);
+$block-shadow: 0px 4px 20px 0px #bfb2ed;
+$text-shadow: 0px 4px 4px #ac91fc;
+$transition-time: 0.2s;
+
+$xs: 576px;
+$s: 768px;
+$m: 992px;
+$l: 1200px;
+$xl: 1440px;
+
+@mixin bp-xs { @media (max-width: $xs) { @content; } }
+@mixin bp-s { @media (max-width: $s) { @content; } }
+@mixin bp-m { @media (max-width: $m) { @content; } }
+@mixin bp-l { @media (max-width: $l) { @content; } }
+@mixin bp-xl { @media (max-width: $xl) { @content; } }
+
+@include bp-m {
+  :root {
+    --block-radius: 3.75rem;
+    --font-size-s: 1.063rem;
+    --font-size-m: 1.25rem;
+    --font-size-l: 1.563rem;
+    --font-size-xl: 1.875rem;
+  }
+}
+
+@include bp-s {
+  :root {
+    --block-radius: 2.75rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.125rem;
+    --font-size-xl: 1.5rem;
+  }
+}
