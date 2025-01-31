@@ -90,11 +90,15 @@ section {
   border-radius: calc($block-radius - 2px);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 10fr 9fr 10fr;
   gap: calc($unit * 3);
   padding: calc($unit * 10);
   padding-top: calc($unit * 10 + $block-radius);
+
+  @include bp-l {
+    grid-template-columns: 1fr 2fr;
+  }
 
   @include bp-m {
     padding: calc($unit * 5);
@@ -112,17 +116,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: calc($unit * 2);
-    max-width: 21.75rem;
-    min-width: 16rem;
-
-    @include bp-l {
-      max-width: 24.75rem;
-    }
-
-    @include bp-s {
-      max-width: inherit;
-      min-width: inherit;
-    }
   }
 
   &-block {
@@ -161,7 +154,7 @@ section {
   display: none;
 
   @include bp-l {
-    display: flex;
+    display: grid;
   }
 
   @include bp-s {

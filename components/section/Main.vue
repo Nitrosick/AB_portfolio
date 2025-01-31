@@ -29,6 +29,14 @@
   border-radius: $block-radius;
   box-shadow: $block-shadow;
   z-index: 4;
+
+  @include bp-m {
+    height: calc(100vh - ($unit * 4));
+  }
+
+  @include bp-s {
+    height: calc(100vh - ($unit * 3));
+  }
 }
 
 .main {
@@ -58,7 +66,7 @@
       height: auto;
     }
 
-    @include bp-s {
+    @include bp-xs {
       padding: calc($unit * 1.5);
     }
 
@@ -84,6 +92,7 @@
 
       @include bp-s {
         font-size: var(--font-size-xl);
+        font-weight: 500;
       }
     }
   }
@@ -107,11 +116,11 @@
 
   @include bp-m {
     display: inline-block;
-    margin-bottom: calc($unit * 6);
+    margin-bottom: calc($unit * 7);
   }
 
   @include bp-m {
-    margin-bottom: calc($unit * 4);
+    margin-bottom: calc($unit * 5);
   }
 }
 </style>

@@ -12,7 +12,7 @@
         <h2>{{ data.name }}</h2>
         <p class="description">{{ data.description }}</p>
         <Button
-          :text="`View ${data.button}`.trim()"
+          text="View Project"
           :href="data.link"
         />
       </div>
@@ -91,7 +91,7 @@ onUnmounted(() => {
   padding: calc($unit * 3) calc($unit * 5);
   padding-bottom: 0;
   display: grid;
-  grid-template-columns: 37% 63%;
+  grid-template-columns: 39% 61%;
 
   @include bp-l {
     display: flex;
@@ -143,6 +143,8 @@ onUnmounted(() => {
     @include bp-l {
       order: 2;
       border: none;
+      margin: 0;
+      padding: 0;
     }
   }
 

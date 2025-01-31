@@ -56,7 +56,7 @@ import social from '@/const/social'
   @include bp-s {
     padding: calc($unit * 1.5);
     padding-top: calc($unit * 4 + $block-radius);
-    padding-bottom: calc($unit * 10);
+    padding-bottom: calc($unit * 4);
   }
 
   &-links {
