@@ -6,15 +6,34 @@
     <Loader :on="loading" />
     <Main />
     <AboutMe />
-    <Projects />
+    <Projects @open-details="openDetails" />
     <Contacts />
+    <ProjectDetails
+      :id="projectId"
+      :opened="detailsOpened"
+      @close-details="closeDetails"
+    />
   </div>
 </template>
 
 <script setup>
 const loading = ref(true)
+const projectId = ref(0)
+const detailsOpened = ref(false)
 
 onMounted(() => loading.value = false)
+
+const openDetails = (id) => {
+  projectId.value = id
+  detailsOpened.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeDetails = () => {
+  projectId.value = 0
+  detailsOpened.value = false
+  document.body.style.overflow = ''
+}
 </script>
 
 <style lang="scss" scoped>

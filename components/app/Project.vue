@@ -12,8 +12,8 @@
         <h2>{{ data.name }}</h2>
         <p class="description">{{ data.description }}</p>
         <Button
-          text="View Project"
-          :href="data.link"
+          text="About Project"
+          @click="emits('openDetails', data.id)"
         />
       </div>
     </div>
@@ -62,34 +62,37 @@
 const props = defineProps({
   data: { type: Object, required: true }
 })
+const emits = defineEmits(['openDetails'])
 
 const preview = ref(null);
 const focused = ref(false);
 
 const checkPosition = () => {
-  if (!preview.value) return;
+  if (!preview.value) return
 
-  const rect = preview.value.getBoundingClientRect();
-  const viewportHeight = window.innerHeight;
+  const rect = preview.value.getBoundingClientRect()
+  const viewportHeight = window.innerHeight
 
-  focused.value = rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2;
-};
+  focused.value = rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2
+}
 
 onMounted(() => {
-  window.addEventListener('scroll', checkPosition);
-  checkPosition();
-});
+  window.addEventListener('scroll', checkPosition)
+  checkPosition()
+})
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', checkPosition);
-});
+  window.removeEventListener('scroll', checkPosition)
+})
 </script>
 
 <style lang="scss" scoped>
 .project {
+  border: none;
   border-top: 2px solid var(--color-white);
   padding: calc($unit * 3) calc($unit * 5);
   padding-bottom: 0;
+  background-color: transparent;
   display: grid;
   grid-template-columns: 39% 61%;
 

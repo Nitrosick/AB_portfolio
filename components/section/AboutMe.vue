@@ -21,7 +21,6 @@
         </div>
       </div>
       <div class="aboutme-column">
-        <Photo :size="15.625" />
         <div class="aboutme-block">
           <h2>What I do</h2>
           <Responsibilities />
@@ -33,7 +32,6 @@
       id="aboutme"
     >
       <div class="aboutme-column">
-        <Photo :size="9.875" />
         <div class="aboutme-block">
           <h2>Skills</h2>
           <Skills />

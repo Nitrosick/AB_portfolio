@@ -9,13 +9,17 @@
         v-for="project in projects"
         :key="project.id"
         :data="project"
+        @open-details="id => emits('openDetails', id)"
       />
+
     </div>
   </section>
 </template>
 
 <script setup>
 import projects from '@/const/projects'
+
+const emits = defineEmits(['openDetails'])
 </script>
 
 <style lang="scss" scoped>

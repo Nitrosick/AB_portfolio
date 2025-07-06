@@ -40,6 +40,7 @@ const target = computed(() => {
   transition: all $transition-time;
   white-space: nowrap;
   z-index: 5;
+  cursor: pointer;
 
   &:hover,
   &:active {
