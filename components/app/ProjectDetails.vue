@@ -81,7 +81,7 @@
         </div>
 
         <Button
-          text="View project"
+          :text="project.linkLabel"
           :href="project.link"
           class="outer-link"
         />
@@ -177,7 +177,6 @@ const project = computed(() => {
   &-head {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: calc(var(--unit) * 3);
     padding-bottom: calc(var(--unit) * 3);
     border-bottom: 2px solid var(--color-white);

@@ -4,6 +4,7 @@ export default [
     name: 'Watch Together',
     category: 'feature design - case study',
     link: 'https://www.behance.net/gallery/226037827/UXUI-Case-Study-Feature-for-online-movie-co-watching',
+    linkLabel: 'View on Behance',
     description: 'Feature design for shared video watching inside a live product ecosystem. Created within an existing design system, the work included user flow planning, admin-user interaction, and adaptive UI.',
     single: true,
     details: {
@@ -27,6 +28,7 @@ export default [
     name: 'Personal Portfolio',
     category: 'landing page',
     link: 'https://nb-portfolio.ru/',
+    linkLabel: 'Visit Website',
     description: 'A responsive landing page design for a web developer`s portfolio, showcasing their skills and projects.',
     details: {
       title: 'Portfolio Landing Design for a Frontend Developer',
@@ -44,6 +46,7 @@ export default [
     name: 'Memphis',
     category: 'landing page - case study',
     link: 'https://www.behance.net/gallery/216362803/Memphis-Landing-A-Journey-into-Bold-and-Playful-UI',
+    linkLabel: 'View on Behance',
     description: 'A landing page dedicated to Memphis Style in web design with bold visuals and a user-friendly webinar registration flow.',
     details: {
       title: 'Project: MEMPHIS — A Design Style in Web UI',
@@ -58,17 +61,25 @@ export default [
       ]
     }
   },
-  // {
-  //   id: 4,
-  //   name: 'SubScout',
-  //   category: 'mobile app - case study',
-  //   link: 'https://www.figma.com/proto/EZRkCQ85spoyWGzOhUkXDe/Subscout-App-%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-7-%D1%81%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B0.-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0-%D0%91%D1%83%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F-59-%D0%BA%D0%BE%D0%B3%D0%BE%D1%80%D1%82%D0%B0?node-id=9395-7742&p=f&t=Wsf4dTvJNVvEmuVX-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9385%3A5636', description: 'A subscription tracking app designed with iOS guidelines for seamless management and control.',
-  //   single: true,
-  //   details: {
-  //     title: '',
-  //     blocks: [
-  //       { title: '', text: '' }
-  //     ]
-  //   }
-  // }
+  {
+    id: 4,
+    name: 'SubScout',
+    category: 'mobile app - case study',
+    link: 'https://www.figma.com/proto/EZRkCQ85spoyWGzOhUkXDe/Subscout-App?node-id=9395-7742&t=C5Dg7HWP0SNt0jxP-1',
+    linkLabel: 'View Prototype',
+    description: 'A subscription tracking app designed with iOS guidelines for seamless management and control.',
+    single: true,
+    details: {
+      title: 'SubScout – Subscription Management App',
+      blocks: [
+        { title: 'Project Overview', text: 'SubScout helps users track and manage their subscriptions in one place — from streaming services to cloud tools and fitness apps. The goal was to create a clean, modern design that builds trust and emphasizes financial awareness and control.' },
+        { title: 'Research & Discovery', text: 'To define the right product direction, I conducted: <ul> <li>Competitive Analysis: Studied key players like SubsCrub, SubTrack, SubSee, DemExpenses and SubX to evaluate UX patterns, visual language, and features.</li> <li>User Interviews: Deep interviews with 4 participants (ages 22–35, varied professions) revealed pain points: scattered billing info, forgotten trials, lack of financial clarity</li> </ul> These insights shaped both UX priorities and tone of voice — users wanted simplicity, transparency, and trust.' },
+        { title: 'Moodboard & Research', text: 'I explored modern fintech, utility, and wellness apps to define a minimal yet warm style.', images: [1] },
+        { title: 'User Flow & Wireframes', text: 'I mapped the main flow: Onboarding → subscription search → details → analytics. <br><br> Created mid-fidelity wireframes to define structure and interactions.', images: [2] },
+        { title: 'UI Design & Design System', text: 'll UI was created following the iOS Human Interface Guidelines: <ul> <li>Used a 375px artboard and 4pt grid system</li> <li>Applied native UI components and consistent spacing rules</li> <li>Focused on intuitive gestures and navigation hierarchy</li> <li>Designed for accessibility and dynamic type support</li> </ul> I developed a Figma design system using auto layout, variants, and reusable components.' },
+        { title: 'Interactive Prototype & Testing', text: 'Created a Smart Animate prototype of the main scenario: finding and adding a subscription, and viewing analytics. <br><br> Tested with 3 users using the Figma mobile app. Results: flow was intuitive, visuals were clear. Minor adjustments were made to onboarding steps and button labels.', images: [3] },
+        { title: 'Result', text: '<ul> <li>Full iOS app UI designed for iPhone (375px baseline)</li> <li>UI aligned with iOS Human Interface Guidelines</li> <li>Deep user research and competitive analysis conducted</li> <li>Clickable prototype tested and iterated</li> <li>Delivered a minimal, reliable and user-friendly subscription manager</li> </ul>' }
+      ]
+    }
+  }
 ]
